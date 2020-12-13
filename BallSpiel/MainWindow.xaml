@@ -1,0 +1,17 @@
+﻿<Window x:Class="BallSpiel.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BallSpiel"
+        mc:Ignorable="d"
+        Title="BallSpiel" Height="450" Width="800" KeyUp="Ball_KeyUp">
+    <Grid>
+        <Button x:Name="StartStopButton" Content="Start/Stop" HorizontalAlignment="Left" Margin="22,28,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.132,-1.087" Click="StartStopButton_Click"/>
+        <Label x:Name="SpielStandLabel" Content="0 Clicks" HorizontalAlignment="Left" Margin="22,72,0,0" VerticalAlignment="Top" Width="57"/>
+        <Canvas x:Name="Spielplatz" Margin="99,0,0,0" Background="#FFECA163">
+            <Ellipse x:Name="Ball" Height="70" Canvas.Left="50" Stroke="Black" Canvas.Top="50" Width="70" Fill="#FF339CBB" MouseUp="Ball_MouseUp" />
+        </Canvas>
+
+    </Grid>
+</Window>
