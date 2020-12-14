@@ -104,11 +104,6 @@ namespace BallSpiel
 
         private void StartStopButton_Click(object sender, RoutedEventArgs e)
         {
-            Canvas.SetLeft(Ball, Spielplatz.ActualWidth / 2);                   // Setze Ball in Mitte
-            Canvas.SetTop(Ball, Spielplatz.ActualHeight / 2);
-
-
-
             if (_animationsTimer.IsEnabled)
             {
                 _animationsTimer.Stop();
@@ -141,6 +136,15 @@ namespace BallSpiel
             {
                 Ball.Fill = Brushes.Blue;
             }
+        }
+
+        private void Spielplatz_Loaded(object sender, RoutedEventArgs e)
+        {                                                                                                     // Nach "Loaded"
+            Canvas.SetLeft(Ball, (Spielplatz.ActualWidth  / 2) - (Ball.ActualWidth  / 2) );                   // Setze Ball in Mitte
+            Canvas.SetTop(Ball,  (Spielplatz.ActualHeight / 2) - (Ball.ActualHeight / 2));
+
+            
+
         }
     }
 }
